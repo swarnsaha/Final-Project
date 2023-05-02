@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title Add Video
+    link(rel='stylesheet', href='/css/styles.css')
+  body
+    h1 Add Video
+    form(method='POST', action='/video/new')
+      input(type='url', name='url', placeholder='Video URL', required)
+      input(type='text', name='title', placeholder='Title', required)
+      button(type='submit') Add Video
+    if error
+      p.error= error
+    if message
+      p.message= message

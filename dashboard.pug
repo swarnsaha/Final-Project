@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title Dashboard
+    link(rel='stylesheet', href='/css/styles.css')
+  body
+    h1 Dashboard
+    nav
+      a(href='/video/dashboard/all') All Videos
+      a(href='/video/dashboard/my') My Videos
+    ul
+      each video in videos
+        li
+          p= video.title
+          a(href=video.url) Watch Video
